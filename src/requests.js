@@ -8,3 +8,7 @@ export const getBasicHeroInfoById = async id => {
     const { data: image } = await axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}/image`)
     return { name: powerstats.name , powerstats, imgUrl: image.url }
 }
+
+export const searchHeroesByName = name => {
+    return axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/search/${name}`)
+}
