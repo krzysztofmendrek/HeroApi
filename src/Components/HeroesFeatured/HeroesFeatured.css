@@ -1,7 +1,5 @@
 .featured {
     margin: 30px 0;
-    display: flex;
-    justify-content: space-between;
   }
   
 .featured h1 {

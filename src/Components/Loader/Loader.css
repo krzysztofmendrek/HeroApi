@@ -2,7 +2,6 @@ main > .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
 }
 
 .lds-ripple {

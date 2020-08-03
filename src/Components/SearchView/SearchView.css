@@ -2,4 +2,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.searchView > .featured__hero {
+    margin-bottom: 5%;
 }
