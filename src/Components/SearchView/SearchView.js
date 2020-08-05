@@ -6,8 +6,8 @@ import HeroSimplified from '../HeroSimplified/HeroSimplified';
 import Loader from '../Loader/Loader';
 
 function SearchView() {
-  const [ searchList,  setSearchListContent ] = useState([]);
-  const [ isLoading,  setLoadingState ] = useState(true);
+  const [searchList,  setSearchListContent] = useState([]);
+  const [isLoading,  setLoadingState] = useState(true);
   const { name } = useParams();
 
   useEffect(() => {
