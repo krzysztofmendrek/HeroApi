@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import HeroesFeatured from './Components/HeroesFeatured/HeroesFeatured';
 import SearchView from './Components/SearchView/SearchView';
+import HeroDetails from './Components/HeroDetails/HeroDetails';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <SearchView />
               </Route>
               <Route path='/hero/:id'>
+                <HeroDetails />
               </Route>
             </Switch>
           </div>

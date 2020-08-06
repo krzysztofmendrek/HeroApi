@@ -3,7 +3,7 @@ import './SearchView.css';
 import { searchHeroesByName } from '../../requests';
 import { useParams } from 'react-router';
 import HeroSimplified from '../HeroSimplified/HeroSimplified';
-import Loader from '../Loader/Loader';
+import Loader from '../Shared/Loader/Loader';
 
 function SearchView() {
   const [searchList,  setSearchListContent] = useState([]);
@@ -13,13 +13,16 @@ function SearchView() {
   useEffect(() => {
     setLoadingState(true);
     searchHeroesByName(name).then(searchResults => {
-      const { data } = searchResults;
 
+      const { data } = searchResults;
+      console.log(searchResults)
+      console.log(data)
       if (data.error) {
         return;
       }
 
       const { results } = data;
+      console.log(results)
       setSearchListContent(results);
       setLoadingState(false);
     })

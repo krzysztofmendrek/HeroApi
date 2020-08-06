@@ -12,3 +12,7 @@ export const getBasicHeroInfoById = async id => {
 export const searchHeroesByName = name => {
     return axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/search/${name}`)
 }
+
+export const getHeroDetailsById = id => {
+    return axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}`)
+}

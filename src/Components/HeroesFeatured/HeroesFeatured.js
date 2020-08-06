@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getBasicHeroInfoById } from '../../requests';
 import './HeroesFeatured.css';
 import HeroSimplified from '../HeroSimplified/HeroSimplified';
-import Loader from '../Loader/Loader';
+import Loader from '../Shared/Loader/Loader';
 
 const featuredHeroesIds = [10, 502, 505];
 
