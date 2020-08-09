@@ -25,8 +25,11 @@ function SearchView() {
       console.log(results)
       setSearchListContent(results);
       setLoadingState(false);
+      console.log(searchList)
+
     })
   }, [name]);
+  console.log(searchList)
 
   return (
     <>
