@@ -18,7 +18,7 @@ function SearchView() {
       console.log(searchResults)
       console.log(data)
       if (data.error) {
-        return;
+        return <h1>Provide correct Hero ID</h1>;
       }
 
       const { results } = data;
