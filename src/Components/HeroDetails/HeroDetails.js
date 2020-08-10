@@ -22,8 +22,6 @@ function HeroDetails() {
       const fullInfo = Object.keys(data).map(detail => data[detail]);
 
       // console.log(fullInfo);
-      
-      // .map(info => console.log(data[detail][info])));
 
 
       const { biography } = data;
