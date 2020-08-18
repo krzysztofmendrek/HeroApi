@@ -8,3 +8,15 @@
 .searchView > .featured__hero {
     margin-bottom: 5%;
 }
+
+.searchView--error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.searchView--error img {
+    height: 100%;
+}

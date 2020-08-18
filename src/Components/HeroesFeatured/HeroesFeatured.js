@@ -12,8 +12,8 @@ function HeroesFeatured() {
     fetchAndRenderFeaturedHeroes();
   }, []); 
 
-  const [featuredHeroesList, setFeaturedHeroesList] = useState([]);
-  const [isLoading,  setLoadingState] = useState(true);
+  const [ featuredHeroesList, setFeaturedHeroesList ] = useState([]);
+  const [ isLoading,  setLoadingState ] = useState(true);
 
 
   const fetchAndRenderFeaturedHeroes = async () => {

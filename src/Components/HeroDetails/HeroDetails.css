@@ -9,3 +9,15 @@
 .hero__details h2 {
   margin-top: 5%;
 }
+
+.hero__details--error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.hero__details--error img {
+  height: 100%;
+}
