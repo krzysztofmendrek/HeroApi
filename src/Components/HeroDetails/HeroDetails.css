@@ -1,20 +1,11 @@
-.featured {
-  margin: 30px 0;
+.hero__details {
+  margin-top: 3%;
 }
-  
-.featured h1 {
-  margin-bottom: 25px;
+
+.hero__details img {
+  margin-top: 5%;
 }
-  
-.featured__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-  
-.loader-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
+
+.hero__details h2 {
+  margin-top: 5%;
 }
