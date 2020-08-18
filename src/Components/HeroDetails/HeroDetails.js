@@ -19,21 +19,21 @@ function HeroDetails() {
       }
       console.log(data);
       const getData = Object.keys(data).map(detail => data[detail]);
-      console.log(getData);
+      setSearchHeroDetailsContent(getData);
+      // console.log(getData);
 
-      const fullInfo = () => {
-        for(const info of getData) {
-          console.log(info);
-          setSearchHeroDetailsContent(info);
-        }
-      }
-      fullInfo();
+      // const fullInfo = () => {
+      //   for(const info of getData) {
+      //     console.log(info);
+      //     setSearchHeroDetailsContent(info);
+      //   }
+      // }
+      // fullInfo();
      
       setLoadingState(false);
     })
   }, [id]);
-  
-  console.log(searchHeroDetails);
+  console.log(searchHeroDetails)
   return (
     <>
     { !isLoading && (
@@ -41,9 +41,10 @@ function HeroDetails() {
         
         <h1>Hero details:</h1>
         <>
-        {Object.keys(searchHeroDetails).map((key) => (
+        {searchHeroDetails.map(({url, gender}) => (
           <div>
-            <img src={searchHeroDetails.url} alt='Super Hero'></img>
+            <img src={url} alt='Super Hero'></img>
+            <h1>{gender}</h1>
           </div>
           
          ))
