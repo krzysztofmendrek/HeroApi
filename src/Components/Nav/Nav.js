@@ -5,7 +5,7 @@ import './Nav.css';
 
 function Nav() {
   const history = useHistory();
-  const [searchInputValue, setSearchInputValue] = useState('');
+  const [ searchInputValue, setSearchInputValue ] = useState('');
 
   const onEnterPress = event => {
     if (event.key === 'Enter') {

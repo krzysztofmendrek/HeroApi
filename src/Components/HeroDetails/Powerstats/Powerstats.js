@@ -1,5 +1,6 @@
 import React from 'react';
 import './Powerstats.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function Powerstats({ powerstats }) {
   return(
@@ -7,7 +8,7 @@ function Powerstats({ powerstats }) {
       <h2>Powerstats:</h2>
         <ul>
           {Object.keys(powerstats).map(stat =>
-            <li>{stat}: {powerstats[stat]} </li>
+            <li key={uuidv4()}>{stat}: {powerstats[stat]} </li>
             )}
         </ul>
     </>

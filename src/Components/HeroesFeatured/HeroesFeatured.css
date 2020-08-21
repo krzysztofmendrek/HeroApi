@@ -1,3 +1,10 @@
-.hero__details li {
-  margin: 10px 0;
+.featured {
+  height: 70vh;
+}
+
+.featured__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }

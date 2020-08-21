@@ -35,35 +35,50 @@ function HeroDetails() {
     })
   }, [id]);
 
-
   return (
     <>
     { !isLoading && !isError && (
-      <section>
-        <h1>Hero details:</h1>
+      <section className='hero__section'>
+        <div className='hero__image'>
+          <h1>Name: {heroDetails.name}</h1>
+          <img src={heroDetails.image.url} alt={heroDetails.name} />
+        </div>
         <div className='hero__details'>
-          <ul>
-            <h2>Name: {heroDetails.name}</h2>
-            <img src={heroDetails.image.url} alt={heroDetails.name} />
-            <Powerstats powerstats={heroDetails.powerstats} />
-            <Biography biography={heroDetails.biography} />
-            <Appearance appearance={heroDetails.appearance} />
-            <Work work={heroDetails.work} />
-            <Connections connections={heroDetails.connections} />
-          </ul>
+          <h1>Hero details:</h1>
+          <div className='hero__details--wrapper'>
+            <div className='first__column'>
+            <div>
+              <Powerstats powerstats={heroDetails.powerstats} />
+            </div>
+            <div>
+              <Appearance appearance={heroDetails.appearance} />
+            </div>
+            <div>
+              <Connections connections={heroDetails.connections} /> 
+            </div>
+            </div>
+            <div className='second__column'>
+            <div>
+              <Biography biography={heroDetails.biography} />
+            </div>
+            <div>
+              <Work work={heroDetails.work} />
+            </div>
+            </div>
+          </div>
         </div>
       </section> 
     )} {
-      isLoading && <Loader />
-    }
-    {
-      isError && (
+      isError && !isLoading && (
         <section>
           <div className='hero__details--error'>
             <img src={alert} alt='error alert' />
           </div>
         </section>
       )
+    }
+    {
+      isLoading && <Loader />
     }
     </>
   );

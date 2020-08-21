@@ -6,6 +6,10 @@ body {
   font-weight: 300;
 }
 
+main {
+  background-color: black;
+}
+
 h1 {
   font-size: 170%;
 }

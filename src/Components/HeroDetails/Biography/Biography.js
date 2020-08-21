@@ -1,5 +1,6 @@
 import React from 'react';
 import './Biography.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function Biography({ biography }) {
   return(
@@ -11,7 +12,7 @@ function Biography({ biography }) {
       <li>Alias:</li>
       <ul>
         {biography.aliases.map(alias => 
-          <li>{alias}</li>
+          <li key={uuidv4()}>{alias}</li>
           )}
         {biography.aliases.length < 1 && <span>No aliases</span>}
       </ul>

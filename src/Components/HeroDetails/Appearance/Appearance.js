@@ -1,5 +1,6 @@
 import React from 'react';
 import './Appearance.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function Appearance({ appearance }) {
   return(
@@ -11,14 +12,14 @@ function Appearance({ appearance }) {
       <li>Height:</li>
       <ul>
         {appearance.height.map(height => 
-          <li>{height}</li>
+          <li key={uuidv4()} >{height}</li>
           )}
         {appearance.height.length < 1 && <span>No information about height</span>}
       </ul>
       <li>Weight:</li>
       <ul>
         {appearance.weight.map(weight => 
-          <li>{weight}</li>
+          <li key={uuidv4()}>{weight}</li>
           )}
         {appearance.weight.length < 1 && <span>No information about weight</span>}
       </ul>
