@@ -1,7 +1,11 @@
-.searchView .container {
+.searchView .container, .searchView--error {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+}
+
+
+.searchView .container {
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -10,11 +14,13 @@
 }
 
 .searchView--error {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
     height: 70vh;
+}
+
+.searchView--error h1 {
+    text-align: center;
 }
 
 .searchView--error img {

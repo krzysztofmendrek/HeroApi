@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.footer .container a {
+    color: #F57211;
+    text-decoration: none;
+}
+
+.footer__dark {
+    background-color: black;
+    color: white;
+}

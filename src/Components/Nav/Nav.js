@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import logo from '../../assets/img/nav_logo.png';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import './Nav.css';
 
 function Nav() {
+  const location = useLocation();
   const history = useHistory();
   const [ searchInputValue, setSearchInputValue ] = useState('');
 
@@ -19,12 +20,25 @@ function Nav() {
   }
 
   return (
-    <nav className='nav'>
+    <nav 
+    className={`nav ${location.pathname.startsWith('/hero') ? 'nav__dark' : ''}`}>
     <div className='container'>
-      <Link to='/'><img className='nav__logo' src={logo} alt='Superhero Database' /></Link>
+      <Link to='/'>
+        <img className='nav__logo' 
+        src={logo} 
+        alt='Superhero Database' />
+      </Link>
       <div className='nav__search'>
-        <input id='myForm' onKeyPress={onEnterPress} onChange={event => {setSearchInputValue(event.target.value)}} value={searchInputValue} type='text' name='search' />
-        <Link to={`/search/${searchInputValue}`}><button onClick={myFunction}>FIND HERO!</button></Link>
+        <input 
+        onKeyPress={onEnterPress} 
+        onChange={event => {setSearchInputValue(event.target.value)}} 
+        value={searchInputValue} 
+        type='text' 
+        name='search' />
+        <Link 
+        to={`/search/${searchInputValue}`} 
+        onClick={myFunction}>FIND HERO!
+        </Link>
       </div>
     </div>
   </nav>

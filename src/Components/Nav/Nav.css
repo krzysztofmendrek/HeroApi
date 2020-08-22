@@ -1,21 +1,30 @@
 .nav {
-  height: 80px;
+  height: 120px;
+  padding: 5% 0;
   background-color: black;
   color: white;
 }
 
-.nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+.nav__search input, .nav .nav__search a, .nav__search button {
+  height: 30px;
 }
 
-.nav a {
-  color: white;
-  font-size: 130%;
-  font-weight: 500;
-  text-decoration: none;
+.nav .container, .nav__search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav .container {
+  justify-content: space-between;
+}
+
+.nav__search {
+  justify-content: space-evenly;
+}
+
+.nav .container {
+  height: 100%;
 }
 
 .nav__logo {
@@ -23,35 +32,70 @@
 }
 
 .nav__search {
-  display: flex;
-  justify-content: space-between;
-  width: 25%;
+  flex-direction: row;
+  width: 80%;
+  height: 44%;
 }
 
 .nav__search input {
-  height: 30px;
+  padding: 3px 25px 3px 5px;
   border: none;
   border-radius: 8px;
   background-image: url(../../assets/icons/magnifer.svg);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 16%;
+  background-size: 19% 50%;
 }
 
-.nav__search button {
-  height: 30px;
-  padding: 5px;
+.nav .nav__search a {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  border: medium solid #F57211;
   border-radius: 8px;
   color: #F57211;
   font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .nav__search button {
-  height: 30px;
   padding: 3px 5px;
 }
 
-.nav__search input {
-  height: 30px;
-  padding: 3px 25px 3px 5px;
+.nav__dark {
+  background-color: white;
+}
+
+.nav__dark .container input{
+  background-color: black;
+  background-image: url(../../assets/icons/magnifer__white.svg);
+  color: white;
+}
+
+.nav__dark .container .nav__search a {
+  border: medium solid black;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    height: 80px;
+    padding: 0;
+  }
+
+  .nav__search {
+    width: 40%;
+    height: initial;
+  }
+
+  .nav .container, .nav__search {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__search {
+    width: 28%;
+  }
 }

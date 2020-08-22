@@ -9,14 +9,17 @@
 
 @media (min-width: 768px) {
   .featured__hero {
-    width: 49%;
+    width: 47%;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .featured__hero {
-    width: 31%;
-    cursor: pointer;
+    width: 32%;
+  }
+
+  .featured__hero:hover {
+    transform: scale(1.1);
   }
 
   .featured__hero:after {
@@ -33,12 +36,15 @@
     opacity: 0;
   }
 
-  .featured__hero:hover {
-    transform: scale(1.1);
-  }
-
   .featured__hero:hover::after {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .featured__hero {
+    width: 31%;
+    cursor: pointer;
   }
 }
   
@@ -50,11 +56,11 @@
 .featured__hero__img {
   position: relative;
   display: block;
-  height: 377px;
-  object-fit: cover;
   width: 95%;
+  height: 377px;
   border-radius: 20px;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .featured__hero__stats {

@@ -46,17 +46,17 @@ function HeroDetails() {
   return (
     <>
     { !isLoading && !isError && (
-      <section className='hero__section'>
+      <section className='hero__details__section'>
         <div className='container'>
-          <div className='hero__image'>
+          <div className='hero__details__image'>
             <h1>{heroDetails.name}</h1>
             <img src={displayedUrl}
             onError={loadAlternativeImage}
             alt={heroDetails.name} />
           </div>
-          <div className='hero__details'>
+          <div className='hero__details__stats'>
             <h1>Hero details:</h1>
-            <div className='hero__details--wrapper'>
+            <div className='hero__details__stats__wrapper'>
               <div className='first__column'>
               <div>
                 <Powerstats powerstats={heroDetails.powerstats} />

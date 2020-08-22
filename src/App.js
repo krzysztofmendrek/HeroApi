@@ -9,6 +9,7 @@ import {
 import HeroesFeatured from './Components/HeroesFeatured/HeroesFeatured';
 import SearchView from './Components/SearchView/SearchView';
 import HeroDetails from './Components/HeroDetails/HeroDetails';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             <Route exact path='/'>
               <HeroesFeatured />
             </Route>
-            <Route path='/search/:name'>
+            <Route path='/search/:name?'>
               <SearchView />
             </Route>
             <Route path='/hero/:id'>
@@ -28,11 +29,7 @@ function App() {
             </Route>
           </Switch>
         </main>
-        <footer>
-          <div className="container">
-            <p>This content is kindly provided by <a href="https://superheroapi.com/">Superhero API</a></p>
-          </div>
-      </footer>
+        <Footer />
     </Router>  
     </>
   );

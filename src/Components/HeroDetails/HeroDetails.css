@@ -1,70 +1,97 @@
-.hero__section {
+.hero__details__section {
   background-color: black;
 }
 
-.hero__section .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.hero__image {
-  background-color: white;
-  border-radius: 22px;
-  padding: 3%;
-}
-
-.hero__image {
-  font-size: 28px;
-}
-
-.hero__image img {
-  margin-top: 5%;
-}
-
-.hero__details {
-  background-color: black;
-  color: white;
-  padding: 5%;
-}
-
-.hero__details h1 {
-  margin-bottom: 3%;
-}
-
-.hero__details--wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.first__column, .second__column {
+.hero__details__section .container, .hero__details__stats__wrapper, .first__column, .second__column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 4%;
 }
 
-.hero__details li {
+.hero__details__section .container {
+  align-items: flex-start;
+}
+
+.hero__details__image {
+  padding: 3%;
+  border-radius: 22px;
+  background-color: white;
+  font-size: 28px;
+}
+
+.hero__details__image img {
+  width: 100%;
+  margin-top: 5%;
+}
+
+.hero__details__stats {
+  padding: 0 5%;
+  margin-top: 5%;
+  background-color: black;
+  color: white;
+}
+
+.hero__details__stats h1 {
+  margin-bottom: 3%;
+}
+
+.first__column, .second__column {
+  padding: 5%;
+}
+
+.hero__details__stats li {
   margin: 10px 0;
 }
 
-.hero__details h2 {
+.hero__details__stats h2 {
   margin-top: 5%;
   font-size: 24px;
 }
 
 .hero__details--error {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 70vh;
+}
+
+.hero__details--error h1 {
+  text-align: center;
 }
 
 .hero__details--error img {
   height: 100%;
 }
 
-/* footer {
-  display: none;
-} */
+@media (min-width: 768px) {
+  .hero__details__section .container {
+    flex-direction: row;
+  }
+
+  .hero__details__image, .hero__details__stats {
+    width: 50%;
+  }
+
+  .hero__details__stats {
+    margin-top: 0;
+  }
+
+  .hero__details__stats__wrapper {
+    flex-direction: row;
+  }
+
+  .first__column, .second__column {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__details__image {
+    width: 45%;
+  }
+
+  .hero__details__stats {
+    width: 55%;
+  }
+}

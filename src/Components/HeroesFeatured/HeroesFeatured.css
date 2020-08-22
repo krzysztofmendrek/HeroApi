@@ -1,10 +1,30 @@
 .featured .container {
-  height: 70vh;
+  text-align: center;
 }
 
 .featured__list {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+}
+
+.featured__hero {
+  margin-top: 5%;
+}
+
+@media (min-width: 1024px) {
+  .featured .container {
+    height: 70vh;
+    text-align: initial;
+  }
+
+  .featured__list {
+    flex-direction: row;
+  }
+
+  .featured__hero {
+    margin-top: 0;
+  }
 }
