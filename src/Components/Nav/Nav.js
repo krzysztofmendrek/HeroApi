@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/img/nav_logo.png'
+import logo from '../../assets/img/nav_logo.png';
 import { Link, useHistory } from 'react-router-dom';
 import './Nav.css';
 
@@ -14,8 +14,8 @@ function Nav() {
     }
   }
 
-  function myFunction() {
-    document.getElementById('myForm').reset();
+  const myFunction = () => {
+    setSearchInputValue('');
   }
 
   return (
@@ -24,7 +24,7 @@ function Nav() {
       <Link to='/'><img className='nav__logo' src={logo} alt='Superhero Database' /></Link>
       <div className='nav__search'>
         <input id='myForm' onKeyPress={onEnterPress} onChange={event => {setSearchInputValue(event.target.value)}} value={searchInputValue} type='text' name='search' />
-        <Link to={`/search/${searchInputValue}`}><button onClick='myFunction()'>find hero!</button></Link>
+        <Link to={`/search/${searchInputValue}`}><button onClick={myFunction}>FIND HERO!</button></Link>
       </div>
     </div>
   </nav>

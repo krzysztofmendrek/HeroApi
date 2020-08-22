@@ -10,9 +10,10 @@ function HeroSimplified({ name, imgUrl, powerstats, id }) {
   const loadAlternativeImage = () => {
     setDisplayedUrl('https://via.placeholder.com/377')
   }
-
+  
   return (
   <div className='featured__hero'>
+    
     <h2>{name}</h2>
     <Link to={`/hero/${id}`}>
       <img className='featured__hero__img'
@@ -23,23 +24,23 @@ function HeroSimplified({ name, imgUrl, powerstats, id }) {
     <div className='featured__hero__stats'>
       <div>
         <img className='featured__hero__stats__icon' src={icon.boxingIcon} alt='combat icon' />
-        <p>{powerstats.combat}</p>
+        <p>{powerstats.combat === 'null' ? 'N/A' : powerstats.combat}</p>
       </div>
       <div>
         <img className='featured__hero__stats__icon' src={icon.durableIcon} alt='durability icon' />
-        <p>{powerstats.durability}</p>
+        <p>{powerstats.durability === 'null' ? 'N/A' : powerstats.durability}</p>
       </div>
       <div>
         <img className='featured__hero__stats__icon' src={icon.thinkingIcon} alt='intelligence icon' />
-        <p>{powerstats.intelligence}</p>
+        <p>{powerstats.intelligence === 'null' ? 'N/A' : powerstats.intelligence}</p>
       </div>
       <div>
         <img className='featured__hero__stats__icon' src={icon.speedometerIcon} alt='speed icon' />
-        <p>{powerstats.speed}</p>
+        <p>{powerstats.speed === 'null' ? 'N/A' : powerstats.speed}</p>
       </div>
       <div>
         <img className='featured__hero__stats__icon' src={icon.fistIcon} alt='strength icon' />
-        <p>{powerstats.strength}</p>
+        <p>{powerstats.strength === 'null' ? 'N/A' : powerstats.strength}</p>
       </div>
     </div>
   </div>
