@@ -39,7 +39,9 @@ function SearchView() {
     <>
     { !isLoading && !isError && (
       <section className='searchView'>
-        {searchList.map(({ powerstats, image, name, id }) => <HeroSimplified key={id} powerstats={powerstats} imgUrl={image.url} name={name} id={id}/>)}
+        <div className='container'>
+          {searchList.map(({ powerstats, image, name, id }) => <HeroSimplified key={id} powerstats={powerstats} imgUrl={image.url} name={name} id={id}/>)}
+        </div>
       </section>)
       } {
       isLoading && <Loader />
@@ -47,9 +49,11 @@ function SearchView() {
       {
       isError && (
         <section>
-          <div className='searchView--error'>
-            <img src={alert} alt='error alert' />
-            <h1>Provide correct hero name</h1>
+          <div className='container'>
+            <div className='searchView--error'>
+              <img src={alert} alt='error alert' />
+              <h1>Provide correct hero name</h1>
+            </div>
           </div>
         </section>
       )

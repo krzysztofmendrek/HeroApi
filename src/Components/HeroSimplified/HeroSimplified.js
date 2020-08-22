@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as icon from '../../assets/icons'
 import './HeroSimplified.css';
 import { Link } from 'react-router-dom';
 
 function HeroSimplified({ name, imgUrl, powerstats, id }) {
+
+  const [ displayedUrl, setDisplayedUrl ] = useState(imgUrl);
+
+  const loadAlternativeImage = () => {
+    setDisplayedUrl('https://via.placeholder.com/377')
+  }
+
   return (
   <div className='featured__hero'>
     <h2>{name}</h2>
-    <Link to={`/hero/${id}`}><img className='featured__hero__img' src={imgUrl} alt={`${name}`} /></Link>
+    <Link to={`/hero/${id}`}>
+      <img className='featured__hero__img'
+      onError={loadAlternativeImage}
+      src={displayedUrl} 
+      alt={`${name}`} />
+       </Link>
     <div className='featured__hero__stats'>
       <div>
         <img className='featured__hero__stats__icon' src={icon.boxingIcon} alt='combat icon' />

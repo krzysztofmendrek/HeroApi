@@ -10,6 +10,7 @@ function Nav() {
   const onEnterPress = event => {
     if (event.key === 'Enter') {
       history.push(`/search/${searchInputValue}`)
+      setSearchInputValue('');
     }
   }
 

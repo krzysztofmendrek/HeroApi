@@ -16,19 +16,17 @@ function App() {
     <Router>
       <Nav />
         <main>
-          <div className='container'>
-            <Switch>
-              <Route exact path='/'>
-                <HeroesFeatured />
-              </Route>
-              <Route path='/search/:name'>
-                <SearchView />
-              </Route>
-              <Route path='/hero/:id'>
-                <HeroDetails />
-              </Route>
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path='/'>
+              <HeroesFeatured />
+            </Route>
+            <Route path='/search/:name'>
+              <SearchView />
+            </Route>
+            <Route path='/hero/:id'>
+              <HeroDetails />
+            </Route>
+          </Switch>
         </main>
         <footer>
           <div className="container">

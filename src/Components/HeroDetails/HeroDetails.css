@@ -1,12 +1,14 @@
-
 .hero__section {
-  display: flex;
-  justify-content: space-between;
   background-color: black;
 }
 
+.hero__section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .hero__image {
-  height: max-content;
   background-color: white;
   border-radius: 22px;
   padding: 3%;

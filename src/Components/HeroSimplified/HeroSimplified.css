@@ -50,6 +50,8 @@
 .featured__hero__img {
   position: relative;
   display: block;
+  height: 377px;
+  object-fit: cover;
   width: 95%;
   border-radius: 20px;
   margin: 0 auto;
