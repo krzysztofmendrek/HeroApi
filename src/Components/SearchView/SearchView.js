@@ -50,7 +50,7 @@ function SearchView() {
       isError && (
         <section>
           <div className='container'>
-            <div className='searchView--error'>
+            <div className='searchView__error'>
               <img src={alert} alt='error alert' />
               <h1>Provide correct hero name</h1>
             </div>

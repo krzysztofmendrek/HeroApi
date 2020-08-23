@@ -30,6 +30,7 @@ function Nav() {
       </Link>
       <div className='nav__search'>
         <input 
+        autoComplete="none"
         onKeyPress={onEnterPress} 
         onChange={event => {setSearchInputValue(event.target.value)}} 
         value={searchInputValue} 

@@ -2,7 +2,7 @@
   background-color: black;
 }
 
-.hero__details__section .container, .hero__details__stats__wrapper, .first__column, .second__column {
+.hero__details__section .container, .hero__details__stats__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,7 +36,9 @@
 }
 
 .first__column, .second__column {
-  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
 }
 
 .hero__details__stats li {
@@ -48,7 +50,7 @@
   font-size: 24px;
 }
 
-.hero__details--error {
+.hero__details__error {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,11 +58,11 @@
   height: 70vh;
 }
 
-.hero__details--error h1 {
+.hero__details__error h1 {
   text-align: center;
 }
 
-.hero__details--error img {
+.hero__details__error img {
   height: 100%;
 }
 
@@ -83,6 +85,7 @@
 
   .first__column, .second__column {
     width: 50%;
+    padding: 5%;
   }
 }
 

@@ -83,7 +83,7 @@ function HeroDetails() {
     )} {
       isError && !isLoading && (
         <section>
-          <div className='hero__details--error'>
+          <div className='hero__details__error'>
             <img src={alert} alt='error alert' />
           </div>
         </section>

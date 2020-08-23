@@ -1,4 +1,4 @@
-.searchView .container, .searchView--error {
+.searchView .container, .searchView__error {
     display: flex;
     align-items: center;
 }
@@ -13,16 +13,16 @@
     margin-bottom: 5%;
 }
 
-.searchView--error {
+.searchView__error {
     flex-direction: column;
     justify-content: center;
     height: 70vh;
 }
 
-.searchView--error h1 {
+.searchView__error h1 {
     text-align: center;
 }
 
-.searchView--error img {
+.searchView__error img {
     height: 50%;
 }
