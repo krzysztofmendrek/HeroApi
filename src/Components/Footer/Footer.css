@@ -5,11 +5,17 @@
 }
 
 .footer .container a {
-    color: #F57211;
-    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 .footer__dark {
     background-color: black;
+    color: white;
+}
+
+.footer__dark .container a {
     color: white;
 }

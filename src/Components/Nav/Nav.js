@@ -28,19 +28,20 @@ function Nav() {
         src={logo} 
         alt='Superhero Database' />
       </Link>
-      <div className='nav__search'>
+      <form className='nav__search'>
         <input 
-        autoComplete="none"
+        autoComplete="off"
         onKeyPress={onEnterPress} 
         onChange={event => {setSearchInputValue(event.target.value)}} 
         value={searchInputValue} 
+        aria-label='enter name of your hero'
         type='text' 
         name='search' />
         <Link 
         to={`/search/${searchInputValue}`} 
         onClick={myFunction}>FIND HERO!
         </Link>
-      </div>
+      </form>
     </div>
   </nav>
   );

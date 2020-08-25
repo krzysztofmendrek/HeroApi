@@ -40,7 +40,10 @@ function SearchView() {
     { !isLoading && !isError && (
       <section className='searchView'>
         <div className='container'>
-          {searchList.map(({ powerstats, image, name, id }) => <HeroSimplified key={id} powerstats={powerstats} imgUrl={image.url} name={name} id={id}/>)}
+          <h1>Search result for '{name}'</h1>
+          <div className='featured__hero__wrapper'>
+            {searchList.map(({ powerstats, image, name, id }) => <HeroSimplified key={id} powerstats={powerstats} imgUrl={image.url} name={name} id={id}/>)}
+          </div>
         </div>
       </section>)
       } {
