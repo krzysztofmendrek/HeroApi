@@ -1,6 +1,8 @@
 # Hero API
 
-It is an application to find your favorite hero. It was created using Create-React-App. The information used in the application is taken from the [Superhero API] (https://superheroapi.com/)
+It is an application to find your favorite hero. It was created using Create-React-App. The information used in the application is taken from the Superhero API
+
+[Superhero API](https://superheroapi.com/)
 
 ## If you want to use the application, you should:
 
