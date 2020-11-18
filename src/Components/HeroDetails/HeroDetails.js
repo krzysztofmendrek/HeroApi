@@ -38,6 +38,8 @@ function HeroDetails() {
       setDisplayedUrl(heroDetails.image.url);
 
       setLoadingState(false);
+    }).catch(error => {
+      error ? setErrorState(true) : setErrorState(false);
     })
   }, [id]);
 
@@ -90,7 +92,7 @@ function HeroDetails() {
       )
     }
     {
-      isLoading && <Loader />
+      isLoading && <Loader isLoading={isLoading} />
     }
     </>
   );

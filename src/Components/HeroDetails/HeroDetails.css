@@ -1,8 +1,10 @@
 .hero__details__section {
+  min-height: calc(100vh - 80px - 80px);
   background-color: black;
 }
 
-.hero__details__section .container, .hero__details__stats__wrapper {
+.hero__details__section .container,
+.hero__details__stats__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,7 +37,8 @@
   margin-bottom: 3%;
 }
 
-.first__column, .second__column {
+.first__column,
+.second__column {
   display: flex;
   flex-direction: column;
   padding: 0 5%;
@@ -71,7 +74,8 @@
     flex-direction: row;
   }
 
-  .hero__details__image, .hero__details__stats {
+  .hero__details__image,
+  .hero__details__stats {
     width: 50%;
   }
 
@@ -83,7 +87,8 @@
     flex-direction: row;
   }
 
-  .first__column, .second__column {
+  .first__column,
+  .second__column {
     width: 50%;
     padding: 5%;
   }

@@ -2,7 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  height: calc(100vh - 170px - 50px - 50px - 27px - 80px);
+}
+
+.loading-container--hero-details {
+  height: calc(100vh - 170px - 80px);
 }
 
 .lds-ripple {
@@ -32,12 +36,22 @@
     height: 0;
     opacity: 1;
   }
-  
+
   100% {
     top: 0px;
     left: 0px;
     width: 72px;
     height: 72px;
     opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .loading-container {
+    height: calc(100vh - 80px - 50px - 50px - 27px - 80px);
+  }
+
+  .loading-container--hero-details {
+    height: calc(100vh - 80px - 80px);
   }
 }
