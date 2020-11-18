@@ -1,21 +1,21 @@
 .footer {
-    display: flex;
-    align-items: center;
-    height: 80px;
+  display: flex;
+  align-items: center;
+  height: 80px;
 }
 
 .footer .container a {
-    color: black;
-    text-decoration: underline;
-    font-size: 20px;
-    font-weight: 800;
+  color: black;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .footer__dark {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .footer__dark .container a {
-    color: white;
+  color: white;
 }

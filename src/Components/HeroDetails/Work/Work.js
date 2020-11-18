@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Work({ work }) {
-  return(
+  return (
     <>
       <h2>Work:</h2>
       <ul>
@@ -9,7 +9,7 @@ function Work({ work }) {
         <li>Base: {work.base}</li>
       </ul>
     </>
-  )
+  );
 }
 
 export default Work;

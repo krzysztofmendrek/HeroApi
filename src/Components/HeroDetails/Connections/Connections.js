@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Connections({ connections }) {
-  return(
+  return (
     <>
       <h2>Connections:</h2>
       <ul>
@@ -9,7 +9,7 @@ function Connections({ connections }) {
         <li>Relatives: {connections.relatives}</li>
       </ul>
     </>
-  )
+  );
 }
 
 export default Connections;

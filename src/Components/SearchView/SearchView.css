@@ -1,30 +1,30 @@
 .searchView .container .featured__hero__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .searchView .container h1 {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 .searchView .container .featured__hero__wrapper > .featured__hero {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 .searchView__error {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 70vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
 }
 
 .searchView__error h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .searchView__error img {
-    height: 50%;
+  height: 50%;
 }
